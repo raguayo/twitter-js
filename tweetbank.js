@@ -1,11 +1,13 @@
 const _ = require('lodash');
 
 var data = [];
+var id = 0;
 
 function add(name, content) {
   data.push({
     name: name,
-    content: content
+    content: content,
+    id: id++,
   });
 }
 
@@ -29,8 +31,8 @@ const randArrayEl = function(arr) {
 };
 
 const getFakeName = function() {
-  const fakeFirsts = [ 'Kate', 'Omri', 'Gabriel', 'Joe'];
-  const fakeLasts = [ 'Dunderproto', 'Binder', 'Docsreader', 'Ecma'];
+  const fakeFirsts = ['Kate', 'Omri', 'Gabriel', 'Joe'];
+  const fakeLasts = ['Dunderproto', 'Binder', 'Docsreader', 'Ecma'];
   return randArrayEl(fakeFirsts) + " " + randArrayEl(fakeLasts);
 };
 
